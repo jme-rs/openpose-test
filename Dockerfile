@@ -16,7 +16,8 @@ RUN apt update \
     nano \
     net-tools \
     build-essential \
-    python3.11 python3-pip 
+    wget
+    # python3.11 python3-pip 
 
 RUN echo "alias python=python3.11" >> ~/.bashrc \
     && echo 'alias pip="python3.11 -m pip"' >> ~/.bashrc
