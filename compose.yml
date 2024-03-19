@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  openpose-test:
+    container_name: openpose-test
+    build: .
+    network_mode: host
+    ipc: host
+    tty: true
+    volumes:
+      - ./workspace:/root/workspace
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities:
+              - gpu
