@@ -16,5 +16,9 @@ https://github.com/CMU-Perceptual-Computing-Lab/openpose/issues/1567#issuecommen
 ```
 
 ```sh
+cmake -DBUILD_PYTHON=ON ..
+```
+
+```sh
 ./build/examples/openpose/openpose.bin --video examples/media/video.avi
 ```
