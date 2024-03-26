@@ -4,6 +4,7 @@ services:
   openpose-test:
     build: .
     network_mode: host
+    ipc: host
     tty: true
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
